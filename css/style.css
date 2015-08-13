@@ -1,0 +1,133 @@
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+body {
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Roboto Light', 'Segoe UI Web Light', 'Segoe UI Light', 'Segoe UI Web Regular', 'Segoe UI', Helvetica, Arial, sans-serif; 
+  margin: 1em;
+  background: #282537;
+  background-image: -webkit-radial-gradient(top, circle cover, #5A5978 0%, #252233 80%);
+  background-image: -moz-radial-gradient(top, circle cover, #5A5978 0%, #252233 80%);
+  background-image: -o-radial-gradient(top, circle cover, #5A5978 0%, #252233 80%);
+  background-image: radial-gradient(top, circle cover, #5A5978 0%, #252233 80%);
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+header {
+  margin: 2em 2em 3em 2em;
+}
+h1, h2, h3 {
+  margin: 0;
+  text-shadow: 0 2px 1px #333;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+h1 {
+  font-size: 3.5em;
+}
+h2 {
+  font-size: 1.4em;
+  line-height: 1.6em;
+  text-transform: uppercase;
+}
+
+/* UI Layout and styles */
+
+.chart-container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 64px;
+  margin: 0;
+  padding: 0 15px;
+  background-color: rgba(255, 255, 255, 0.15);
+  text-align: right;
+}
+footer a {
+  font-size: 2em;
+  position: relative;
+  top: 3px;
+  color: #fff;
+  text-decoration: none;
+}
+footer > div {
+  display: inline-block;
+}
+footer > p {
+  font-size: 1.3em;
+  line-height: 64px;
+  font-weight: normal;
+}
+footer img {
+  height: 48px;
+  padding: 10px 0 0 0;
+  margin: 0;
+}
+
+@media only screen and (min-height: 1260px) {
+  header {
+    margin: 3em 3em 8em 3em;
+  }
+  #chart {
+    margin-top: 160px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  body {
+    font-size: 21px;
+  }
+  header {
+    margin: 2em 2em 2em 2em;
+  }
+  #chart {
+    height: 280px;
+    margin-top: 40px;
+  }
+}
+
+/* Graph styles */
+
+#chart {
+  margin-top: 3em;
+}
+#chart line {
+  fill: #fff;
+}
+#chart .tick line {
+  stroke: #eee;
+}
+#chart text {
+  font-family: "HelveticaNeue-UltraLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue";
+  fill: #eee;
+  font-size: 1.2em;
+}
+.c3-legend-background {
+  fill: none;
+  stroke: none;
+  stroke-width: 0;
+}
+.c3-legend-item {
+  fill: none;
+  stroke: none;
+  stroke-width: 0;
+}
+#chart .c3 line, .c3 path  {
+  fill: none;
+  stroke: #eee;
+}
+#chart .c3-line {
+  stroke-width: 2px;
+}
+#chart .c3-text-temperature {
+  fill: #eee;
+}
+#chart .c3-tooltip {
+  color: #000;
+}
