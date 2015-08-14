@@ -36,9 +36,9 @@
             temperature: 'orange'
           }
         },
-        size: {
-          height: 440
-        },
+        // size: {
+        //   height: 440
+        // },
         legend: {
           show: false
         },

@@ -14,7 +14,7 @@ body {
   flex-direction: column;
 }
 header {
-  margin: 2em 2em 3em 2em;
+  margin: 1em 1.5em;
 }
 h1, h2, h3 {
   margin: 0;
@@ -23,20 +23,15 @@ h1, h2, h3 {
   text-rendering: optimizeLegibility;
 }
 h1 {
-  font-size: 3.5em;
+  font-size: 2.2em;
 }
 h2 {
-  font-size: 1.4em;
-  line-height: 1.6em;
+  font-size: 1em;
+  line-height: 1.4em;
   text-transform: uppercase;
 }
 
 /* UI Layout and styles */
-
-.chart-container {
-  width: 85%;
-  margin: 0 auto;
-}
 
 footer {
   position: fixed;
@@ -46,7 +41,6 @@ footer {
   min-height: 64px;
   margin: 0;
   padding: 0 15px;
-  background-color: rgba(255, 255, 255, 0.15);
   text-align: right;
 }
 footer a {
@@ -70,32 +64,11 @@ footer img {
   margin: 0;
 }
 
-@media only screen and (min-height: 1260px) {
-  header {
-    margin: 3em 3em 8em 3em;
-  }
-  #chart {
-    margin-top: 160px;
-  }
-}
-
-@media only screen and (max-width: 1100px) {
-  body {
-    font-size: 21px;
-  }
-  header {
-    margin: 2em 2em 2em 2em;
-  }
-  #chart {
-    height: 280px;
-    margin-top: 40px;
-  }
-}
 
 /* Graph styles */
 
 #chart {
-  margin-top: 3em;
+  margin-top: 2em;
 }
 #chart line {
   fill: #fff;
@@ -130,4 +103,38 @@ footer img {
 }
 #chart .c3-tooltip {
   color: #000;
+}
+
+@media only screen and (min-height: 1260px) {
+  header {
+    margin: 3em 3em 8em 3em;
+  }
+  #chart {
+    margin-top: 160px;
+    height: 500px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  header {
+    margin: 2em 2em 2em 2em;
+  }
+  .chart-container {
+    width: 85%;
+    margin: 0 auto;
+  }
+  #chart {
+    margin-top: 3em;
+    height: 440px;
+  }
+  h1 {
+    font-size: 3.5em;
+  }
+  h2 {
+    font-size: 1.4em;
+    line-height: 1.6em;
+  }
+  footer {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
 }
