@@ -60,11 +60,17 @@
         }
       },
       transform: function(m) {
-        return {columns: [
-          ['temperature', m.temperature],
-          ['pressure', m.pressure]
-          //['timestamp', Date.now()]
+        if(m.pressure) {
+          return {columns: [
+            ['temperature', m.temperature],
+            ['pressure', m.pressure]
+          ]};
+        } else {
+          return {columns: [
+            ['temperature', m.temperature]
         ]};
+        }
+        
       },
       connect: function(m) {
         console.log('eon connected to: '+ m);
