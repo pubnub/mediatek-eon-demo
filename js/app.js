@@ -34,19 +34,34 @@
           labels: true,
           colors: {
             temperature: 'orange'
+          },
+          axes: {
+            temperature: 'y',
+            pressure: 'y2'
           }
         },
         // size: {
         //   height: 440
         // },
         legend: {
-          show: false
+          show: true
         },
         axis : {
           y: {
+            // max: 100,
+            // min: 50,
             label: {
-             text: 'Temperature [C°]',
-             position: 'outer-top'
+              text: 'Temperature [C°]',
+              position: 'outer-top'
+            }
+          },
+          y2: {
+            show: true,
+            max: 1200,
+            min: 600,
+            label: {
+              text: 'Pressure [hPa]',
+              position: 'outer-top'
             }
           },
           x : {
@@ -61,6 +76,7 @@
       },
       transform: function(m) {
         if(m.pressure) {
+          console.log(m.pressure);
           return {columns: [
             ['temperature', m.temperature],
             ['pressure', m.pressure]
