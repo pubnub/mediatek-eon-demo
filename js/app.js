@@ -76,7 +76,6 @@
       },
       transform: function(m) {
         if(m.pressure) {
-          console.log(m.pressure);
           return {columns: [
             ['temperature', m.temperature],
             ['pressure', m.pressure]
