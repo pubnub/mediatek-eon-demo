@@ -76,13 +76,16 @@
       },
       transform: function(m) {
         if(m.pressure) {
+          var t = m.temperature.toFixed(1);
+          var p = m.pressure/100;
+
           return {columns: [
-            ['temperature', m.pressure.toFixed(1)],
-            ['pressure', m.pressure/100]
+            ['temperature', t],
+            ['pressure', p]
           ]};
         } else {
           return {columns: [
-            ['temperature', m.temperature]
+            ['temperature', t]
         ]};
         }
         
