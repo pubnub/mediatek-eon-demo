@@ -111,8 +111,8 @@
 
   function connect() {
     var pubnub = PUBNUB.init({
-      subscribe_key: 'sub-c-f1a8d734-df0c-11e4-962e-02ee2ddab7fe',
-      publish_key: 'pub-c-f8ac677a-e6ce-4060-b0bf-d1c30fc45ba2'
+      subscribe_key: 'sub-c-c93e83ea-30c7-11e5-b3fa-02ee2ddab7fe',
+      publish_key: 'pub-c-d3e5527d-c6ab-484a-a895-9b97cf52f683'
     });
 
     plotGraph(pubnub);    
