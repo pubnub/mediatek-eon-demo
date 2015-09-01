@@ -77,8 +77,8 @@
       transform: function(m) {
         if(m.pressure) {
           return {columns: [
-            ['temperature', m.temperature],
-            ['pressure', m.pressure]
+            ['temperature', m.pressure.toFixed(1)],
+            ['pressure', m.pressure/100]
           ]};
         } else {
           return {columns: [
